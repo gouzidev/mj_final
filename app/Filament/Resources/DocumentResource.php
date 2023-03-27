@@ -28,10 +28,10 @@ class DocumentResource extends Resource
         return $form
             ->schema([
                 TextInput::make("title")->required(),
-                FileUpload::make('file')->acceptedFileTypes(['application/pdf'])->maxSize(2048)->disk('public')->directory('docs'),
-                FileUpload::make('thumbnail')->image()->maxSize(2048)->disk('public')->directory('images'),
+                FileUpload::make('file')->acceptedFileTypes(['application/pdf'])->maxSize(2048)->disk('public')->directory('docs')->required(),
+                FileUpload::make('thumbnail')->image()->maxSize(2048)->disk('public')->directory('images')->required(),
                 Select::make("category_id")
-                    ->relationship("category",'category_name')
+                    ->relationship("category",'category_name')->required()
             ]);
     }
 
