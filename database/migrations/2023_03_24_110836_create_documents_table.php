@@ -13,9 +13,7 @@ return new class extends Migration
     {
         Schema::create('documents', function (Blueprint $table) {
             $table->id();
-            $table->id();
             $table->string('title');
-            $table->string('created_at')->default(now());
             $table->string('file');
             $table->string('thumbnail');
             $table->foreignId('category_id')->constrained()->cascadeOnDelete();
