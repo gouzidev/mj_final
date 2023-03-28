@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\DocumentResource\Pages;
 use App\Filament\Resources\DocumentResource\RelationManagers;
+use App\Filament\Resources\DocumentResource\RelationManagers\CategoryRelationManager;
 use App\Models\Document;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
@@ -63,7 +64,7 @@ class DocumentResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            CategoryRelationManager::class
         ];
     }
 
