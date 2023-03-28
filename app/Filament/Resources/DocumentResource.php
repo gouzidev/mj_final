@@ -13,6 +13,7 @@ use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
 use Filament\Forms\ComponentContainer;
+use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -28,10 +29,15 @@ class DocumentResource extends Resource
         return $form
             ->schema([
                 TextInput::make("title")->required(),
-                FileUpload::make('file')->acceptedFileTypes(['application/pdf'])->maxSize(2048)->disk('public')->directory('docs')->required(),
+                FileUpload::make('file')
+                    ->acceptedFileTypes(['application/pdf'])
+                    ->maxSize(2048)
+                    ->disk('public')
+                    ->directory('docs')
+                    ->required(),
                 FileUpload::make('thumbnail')->image()->maxSize(2048)->disk('public')->directory('images')->required(),
                 Select::make("category_id")
-                    ->relationship("category",'category_name')->required()
+                    ->relationship("category", 'category_name')->required()
             ]);
     }
 
@@ -40,7 +46,8 @@ class DocumentResource extends Resource
         return $table
             ->columns([
                 TextColumn::make("title"),
-
+                TextColumn::make("category.category_name"),
+                ImageColumn::make("thumbnail")->disk("public")->url('/images')->height(80)
             ])
             ->filters([
                 //
@@ -52,14 +59,14 @@ class DocumentResource extends Resource
                 Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
-    
+
     public static function getRelations(): array
     {
         return [
             //
         ];
     }
-    
+
     public static function getPages(): array
     {
         return [
@@ -67,5 +74,5 @@ class DocumentResource extends Resource
             'create' => Pages\CreateDocument::route('/create'),
             'edit' => Pages\EditDocument::route('/{record}/edit'),
         ];
-    }    
+    }
 }
