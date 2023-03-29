@@ -11,8 +11,10 @@ use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
+use Filament\Tables\Columns\TextColumn;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Filament\Resources\Tables\Columns\Text;
 
 class UserResource extends Resource
 {
@@ -26,7 +28,11 @@ class UserResource extends Resource
             ->schema([
                 TextInput::make('name'),
                 TextInput::make('email'),
-                
+                TextInput::make('password')
+                    ->label('Password')
+                    ->required()
+                    ->autocomplete('password')
+                    ->type('password'),
             ]);
     }
 
@@ -34,7 +40,12 @@ class UserResource extends Resource
     {
         return $table
             ->columns([
-                
+                TextColumn::make('name'),
+                TextColumn::make('email'),
+                TextColumn::make('password')
+                    ->label('Password')
+
+
             ])
             ->filters([
                 //
@@ -46,14 +57,14 @@ class UserResource extends Resource
                 Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
-    
+
     public static function getRelations(): array
     {
         return [
             //
         ];
     }
-    
+
     public static function getPages(): array
     {
         return [
@@ -61,5 +72,5 @@ class UserResource extends Resource
             'create' => Pages\CreateUser::route('/create'),
             'edit' => Pages\EditUser::route('/{record}/edit'),
         ];
-    }    
+    }
 }
