@@ -20,3 +20,10 @@ yarn-error.log
 
 /public/images
 /public/docs
+.phpunit.result.cache
+/.fleet
+/.idea
+/.vscode
+
+/public/images
+/public/docs
