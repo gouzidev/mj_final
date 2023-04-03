@@ -1,4 +1,4 @@
-@vite("resources/css/article.css")
+@vite(["resources/css/article.css" , "resources/imports/fontawesome.php"])
 
 
 <div class="grid gap-4">
@@ -14,7 +14,7 @@
     require_once(resource_path("imports/limitString.php"))
 @endphp
 
-<div class=" overflow-hidden ">
+<div class=" overflow-hidden relative">
     
     {{-- <div class="bg-white absolute left-0 h-full"></div> --}}
 
@@ -32,9 +32,12 @@
 
         </ul>
         </div>
-        <div class="glide__arrows  bottom-0 left-0 right-0 mx-auto my-4" data-glide-el="controls">
-        
-        </div>
+        <div class="glide__arrows absolute top-0 translate-y-1/2 w-full h-full px-8" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+            <button class="glide__arrow glide__arrow--right bg-white/80 px-4 py-2 rounded-lg float-right" data-glide-dir=">">
+                    <i class="fa-solid fa-caret-right text-xl"></i>
+            </button>
+          </div>
     </div>
 
 

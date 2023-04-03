@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href={{asset("logo.png")}}>
+    <script src="https://kit.fontawesome.com/a88bd20437.js" crossorigin="anonymous"></script>
     @vite(['resources/css/app.css'])
 
 

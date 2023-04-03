@@ -4,7 +4,7 @@
   rel="stylesheet"
 />
 
-<div class="nav py-4 mb-2" id="navigation">
+<div class="nav py-4 " id="navigation">
   <div class="md:fixed w-full top-0 md:z-[100]">
     <div
       id="spec_nav"
@@ -25,6 +25,7 @@
             class="text-sm md:font-small uppercase hidden md:flex font_playfaire"
           >
             La Ministère de la Justice
+
           </h5>
         </div>
       </a>
@@ -40,7 +41,7 @@
     </div>
   </div>
   <div class="">
-    <div class="mx-auto md:mt-24 max-w-screen-xl md:pl-6 pl-4 py-3">
+    <div class="mx-auto md:mt-24 max-w-screen-xl md:px-6 px-4 py-3">
       <button
         data-collapse-toggle="navbar-default"
         type="button"
