@@ -10,16 +10,19 @@
 
 </div>
 
+@php
+    require_once(resource_path("imports/limitString.php"))
+@endphp
 
-<div class=" w-screen overflow-hidden ">
+<div class=" overflow-hidden ">
     
     {{-- <div class="bg-white absolute left-0 h-full"></div> --}}
 
-    <div class="glide py-4 " id="gallery">
+    <div class="glide " id="gallery">
         {{-- bg-gradient-to-r from-transparent to-white/30 --}}
-        <div class="glide__track " data-glide-el="track">
+        <div class="glide__track overflow-hidden" data-glide-el="track">
             
-        <ul class="glide__slides flex  ">
+        <ul class="glide__slides flex ">
             
 
             @foreach ($articles as $article)

@@ -9,18 +9,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href={{asset("logo.png")}}>
     @vite(['resources/css/app.css'])
-    <script src="https://cdn.tailwindcss.com"></script>
 
 
 
     @livewireStyles
 
 </head>
-<body class="p-2 md:p-0">
+<body class="p-2 md:p-0 flex-wrap">
     @livewire('navbar')
     
     @livewire("app")
-        
+
+    
 
 
 
