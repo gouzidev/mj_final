@@ -184,13 +184,13 @@
           ></li>
         </ul>
         <div>
-
             @if(!Auth::user()) 
-                <a href="{{route("login")}}">
-                    <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5  dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
-                        Connexion
-                    </button> 
-                </a>    
+            <a href="{{route("login")}}">
+                <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5  dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+                    Connexion
+                </button> 
+            </a>    
+        
             @else
                 {{ Auth::user()->name }}
                 <form method="POST" action="{{route("logout")}}">
@@ -198,7 +198,7 @@
                     <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5  dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
                         Logout
                     </button> 
-                </form>
+                </form>  
             @endif
         </div>
       </div>
