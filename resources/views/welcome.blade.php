@@ -16,12 +16,11 @@
     @livewireStyles
 
 </head>
-<body class="p-2 md:p-0 flex-wrap">
+<body class="p-2 md:p-0 flex-wrap dark:bg-gray-800">
     @livewire('navbar')
     
     @livewire("app")
-
-    
+ 
 
 
 

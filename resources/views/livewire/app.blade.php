@@ -55,6 +55,9 @@
     ])
 
     
+    @livewire("footer")
+
+
 
 
     <div wire:loading>

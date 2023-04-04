@@ -4,11 +4,11 @@
   rel="stylesheet"
 />
 
-<div class="nav py-4 " id="navigation">
+<div class="nav py-4  dark:bg-gray-900" id="navigation">
   <div class="md:fixed w-full top-0 md:z-[100]">
     <div
       id="spec_nav"
-      class="max-w-screen-xl duration-200 sticky flex flex-wrap justify-between items-center mx-auto md:px-6 px-4 py-3 bg-white rounded-lg mt-4"
+      class="max-w-screen-xl duration-200 sticky flex flex-wrap justify-between items-center mx-auto md:px-6 px-4 py-3 bg-white dark:bg-gray-800 rounded-lg mt-4"
     >
       <a
         href="/"
@@ -22,7 +22,7 @@
           </h4>
           <h5
             href="#"
-            class="text-sm md:font-small uppercase hidden md:flex font_playfaire"
+            class="text-sm md:font-small uppercase hidden md:flex font_playfaire text-gray-500 sm:mb-0 dark:text-gray-400"
           >
             La Ministère de la Justice
 
@@ -32,7 +32,7 @@
       <div
         class="flex items-center justify-center md:justify-left w-full md:w-auto"
       >
-        <p class="flex" id="title"></p>
+        <p class="flex text-gray-500 sm:mb-0 dark:text-gray-200" id="title"></p>
       </div>
       <div class="hidden md:flex justify-end md:w-1/4">
         <img src={{asset("centre-logo.png")}} class="h-16" alt="La Ministère de
@@ -64,19 +64,19 @@
         </svg>
       </button>
 
-      <div class="md:flex justify-between items-center" id="navbar-default">
+      <div class="md:flex justify-between items-center " id="navbar-default">
         <ul
           class="flex flex-col mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0"
         >
           <li>
             <a
               href="#"
-              class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+              class="block py-2 pl-3 pr-4text-gray-500 sm:mb-0 dark:text-gray-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
               >Accuei</a
             >
           </li>
           <li
-            class="py-2 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+            class="py-2 pr-4text-gray-500 sm:mb-0 dark:text-gray-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
           >
             <button
               id="dropdownDefaultButton1"
@@ -107,13 +107,13 @@
               class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
             >
               <ul
-                class="p-2 text-sm text-gray-700 dark:text-gray-200"
+                class="p-2 text-smtext-gray-500 sm:mb-0 dark:text-gray-400 dark:bg-gray-900 rounded-md "
                 aria-labelledby="dropdownDefaultButton1"
               >
                 <li>
                   <a
                     href="#"
-                    class="block px-4 py-2 text-gray-600 hover:text-white hover:bg-slate-700 rounded-md"
+                    class="block px-4 py-2 text-gray-500 dark:text-while hover:text-white hover:bg-slate-800 rounded-md"
                     >EXM</a
                   >
                 </li>
@@ -121,7 +121,7 @@
             </div>
           </li>
           <li
-            class="py-2 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+            class="py-2 pr-4text-gray-500 sm:mb-0 dark:text-gray-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
           >
             <button
               id="dropdownDefaultButton2"
@@ -152,13 +152,13 @@
               class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
             >
               <ul
-                class="p-2 text-sm text-gray-700 dark:text-gray-200"
-                aria-labelledby="dropdownDefaultButton2"
+                class="p-2 text-smtext-gray-500 sm:mb-0 dark:text-gray-400 dark:bg-gray-900 rounded-md "
+                aria-labelledby="dropdownDefaultButton1"
               >
                 <li>
                   <a
                     href="#"
-                    class="block px-4 py-2 text-gray-600 hover:text-white hover:bg-slate-700 rounded-md"
+                    class="block px-4 py-2 text-gray-500 dark:text-while hover:text-white hover:bg-slate-800 rounded-md"
                     >EXM</a
                   >
                 </li>
@@ -168,14 +168,14 @@
           <li>
             <a
               href="#"
-              class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+              class="block py-2 pl-3 pr-4text-gray-500 sm:mb-0 dark:text-gray-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
               >Statistics</a
             >
           </li>
           <li class="flex">
             <a
               href="#"
-              class="flex py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+              class="flex py-2 pl-3 pr-4text-gray-500 sm:mb-0 dark:text-gray-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
               >Rapports et réalisations</a
             >
           </li>

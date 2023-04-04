@@ -6,7 +6,7 @@
       w-full " />
       </div>
       <div
-        class="absolute p-6 w-full bg-gradient-to-b from-transparent via-black/50 to-black/70 opacity-0 "
+        class="absolute p-6 w-full bg-gradient-to-b from-transparent via-black/50 to-black/70 bottom-0 duration-300"
         id="description"
         >
         <a href="#">

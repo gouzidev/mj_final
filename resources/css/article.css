@@ -3,13 +3,7 @@
   height: 500px;
 
 }
-#description{
-  transform: translate(0,100%);
-  transition: 300ms;
-}
 
 .glide__slide:hover > #description{
-  bottom: 0;
-  opacity: 1;
-  transform: translate(0);
+  bottom: 1;
 }

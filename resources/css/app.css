@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 .fixed-nav {
   position: fixed;
   top:0;
