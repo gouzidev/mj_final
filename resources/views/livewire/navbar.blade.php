@@ -184,12 +184,82 @@
           ></li>
         </ul>
         <div>
+<<<<<<< HEAD
           <button
             type="button"
             class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
           >
             Connexion
           </button>
+=======
+            <div class="mx-auto max-w-screen-xl py-3 md:mt-20 w-full">
+                <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-default" aria-expanded="false">
+                    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+                  </button>
+                  <div class=" md:flex justify-between items-center" id="navbar-default">
+                    <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 ">
+                        <li>
+                            <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 ">Accuei</a>
+                          </li>
+                        <li class=" py-2 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">
+                            <button id="dropdownDefaultButton1" data-dropdown-toggle="dropdown1" class="pl-3 block flex items-center hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 " type="button">Direction <svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+                            <!-- Dropdown menu -->
+                            <div id="dropdown1" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
+                                <ul class="p-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton1">
+                                <li>
+                                    <a href="#" class="block px-4 py-2 text-gray-600 hover:text-white hover:bg-slate-700 rounded-md">EXM</a>
+                                </li>
+                                </ul>
+                            </div>
+                      </li>
+                        <li class=" py-2 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">
+                        <button id="dropdownDefaultButton2" data-dropdown-toggle="dropdown2" class="pl-3 block flex items-center hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 " type="button">Centre <svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+                        <!-- Dropdown menu -->
+                            <div id="dropdown2" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
+                                <ul class="p-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton2">
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 text-gray-600 hover:text-white hover:bg-slate-700 rounded-md">EXM</a>
+    
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                      <li>
+                        <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 ">Statistics</a>
+                      </li>
+                      <li class="flex ">
+                        <a href="#" class="flex py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 ">Rapports et réalisations</a>
+                      </li>
+                      <li class="flex md:float-right text-sm font-medium text-blue-600">
+                            
+                        
+                        
+    
+                    </li>
+                      
+                    </ul>
+                    <div>
+                        
+                         @if(!Auth::user()) 
+                            <a href="{{route("login")}}">
+                                <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5  dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+                                    Connexion
+                                </button> 
+                            </a>    
+                        
+                        @else
+                            {{ Auth::user()->name }}
+                            <form method="POST" action="{{route("logout")}}">
+                                @csrf
+                                <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5  dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+                                    Logout
+                                </button> 
+                            </form>  
+                        @endif
+                        
+
+            </div>  
+>>>>>>> cbc05aae (fixing frontend linking with db)
         </div>
       </div>
     </div>
