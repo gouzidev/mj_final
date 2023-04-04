@@ -257,7 +257,7 @@
               let el = document.createElement("span");
               el.innerText = titleEl;
               if (i == 0) {
-                el.classList.add("font_playfair", "font-lg", "md:text-2xl");
+                el.classList.add("font_playfair", "font-lg", "md:text-xl");
               } else {
                 el.classList.add("arabic", "text-lg", "md:text-4xl");
               }
