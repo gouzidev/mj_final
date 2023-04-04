@@ -33,7 +33,9 @@
         </ul>
         </div>
         <div class="glide__arrows absolute top-0 translate-y-1/2 w-full h-full px-8" data-glide-el="controls">
-            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+            <button class="glide__arrow glide__arrow--right bg-white/80 px-4 py-2 rounded-lg float-left" data-glide-dir="<">
+                <i class="fa-solid fa-caret-left text-xl"></i>
+            </button>
             <button class="glide__arrow glide__arrow--right bg-white/80 px-4 py-2 rounded-lg float-right" data-glide-dir=">">
                     <i class="fa-solid fa-caret-right text-xl"></i>
             </button>
