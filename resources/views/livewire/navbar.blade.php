@@ -8,7 +8,7 @@
   <div class="md:fixed w-full top-0 md:z-[100]">
     <div
       id="spec_nav"
-      class="max-w-screen-xl duration-200 sticky flex flex-wrap justify-between items-center mx-auto md:px-6 px-4 py-3 bg-white dark:bg-gray-800 rounded-lg mt-4"
+      class="max-w-screen-xl duration-200 sticky flex flex-wrap justify-between items-center mx-auto md:px-6 px-4 py-3 rounded-lg mt-4"
     >
       <a
         href="/"
@@ -253,13 +253,13 @@
 
       window.addEventListener("scroll", function () {
         if (window.scrollY >= navTop) {
-          scrolled = true;
           spec_nav.classList.add("scale-105");
           spec_nav.classList.add("drop-shadow-md");
+          spec_nav.classList.add("bg-white","dark:bg-gray-800");
         } else {
-          scrolled = false;
           spec_nav.classList.remove("scale-105");
           spec_nav.classList.remove("drop-shadow-md");
+          spec_nav.classList.remove("bg-white","dark:bg-gray-800");
         }
       });
     </script>

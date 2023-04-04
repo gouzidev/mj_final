@@ -16,7 +16,7 @@
     @livewireStyles
 
 </head>
-<body class="p-2 md:p-0 flex-wrap dark:bg-gray-800">
+<body class="p-2 md:p-0 flex-wrap dark:bg-gray-900">
     @livewire('navbar')
     
     @livewire("app")
