@@ -9,6 +9,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href={{asset("logo.png")}}>
     <script src="https://kit.fontawesome.com/a88bd20437.js" crossorigin="anonymous"></script>
+    <script>
+        // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
     @vite(['resources/css/app.css'])
 
 
@@ -16,7 +24,7 @@
     @livewireStyles
 
 </head>
-<body class="p-2 md:p-0 flex-wrap dark:bg-gray-900">
+<body class="p-2 md:p-0 flex-wrap dark:bg-gray-900 ">
     @livewire('navbar')
     
     @livewire("app")

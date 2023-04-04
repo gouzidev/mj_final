@@ -8,7 +8,7 @@
   <div class="md:fixed w-full top-0 md:z-[100]">
     <div
       id="spec_nav"
-      class="max-w-screen-xl duration-200 sticky flex flex-wrap justify-between items-center mx-auto md:px-6 px-4 py-3 rounded-lg mt-4"
+      class="max-w-screen-xl duration-200 sticky flex flex-wrap justify-between items-center mx-auto md:px-6 px-4 py-3 rounded-xl mt-4"
     >
       <a
         href="/"
@@ -182,8 +182,9 @@
           <li
             class="flex md:float-right text-sm font-medium text-blue-600"
           ></li>
+
         </ul>
-        <div>
+        <div class="flex items-center">
             @if(!Auth::user()) 
             <a href="{{route("login")}}">
                 <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5  dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
@@ -192,14 +193,39 @@
             </a>    
         
             @else
-                {{ Auth::user()->name }}
-                <form method="POST" action="{{route("logout")}}">
-                    @csrf
-                    <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5  dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
-                        Logout
-                    </button> 
-                </form>  
+
+                                
+                <button id="dropdownDividerButton" data-dropdown-toggle="dropdownDivider" class="text-dark dark:text-white focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center" type="button">
+                  <i class="fa-regular fa-user pr-2"></i>
+                  {{ Auth::user()->name }}
+                  <svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+
+                <!-- Dropdown menu -->
+                <div id="dropdownDivider" class="z-10 hidden">
+
+                        <form method="POST" class="flex items-center justify-center " action="{{route("logout")}}" aria-labelledby="dropdownDividerButton">
+                          @csrf
+                          <button type="submit" class="font-lg bg-red-500 text-white   rounded-md px-3 py-2.5">
+                            <i class="fa-solid fa-right-from-bracket duration-150 hover:pr-4"></i>  
+                            Deconnecter
+                          </button> 
+                      </form>  
+
+                </div>
+
+
             @endif
+
+            <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+              <span id="theme-toggle-dark-icon" class=" w-5 h-5 hidden" >
+                <i class="fa-solid fa-sun "></i>
+              </span>
+              <span id="theme-toggle-light-icon" class="w-5 h-5 hidden" >
+                <i class="fa-solid fa-moon"></i>
+              </svg>
+          </button>
+
         </div>
       </div>
     </div>
@@ -231,7 +257,7 @@
               let el = document.createElement("span");
               el.innerText = titleEl;
               if (i == 0) {
-                el.classList.add("font_playfair", "font-lg", "text-2xl");
+                el.classList.add("font_playfair", "font-lg", "md:text-2xl");
               } else {
                 el.classList.add("arabic", "text-lg", "md:text-4xl");
               }
@@ -262,6 +288,55 @@
           spec_nav.classList.remove("bg-white","dark:bg-gray-800");
         }
       });
+
+      if(!localStorage.getItem('color-theme')){
+        localStorage.setItem('color-theme', 'light');
+      }
+
+      var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+      var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+      // Change the icons inside the button based on previous settings
+      if (localStorage.getItem('color-theme') === 'dark') {
+          themeToggleLightIcon.classList.remove('hidden');
+          themeToggleDarkIcon.classList.add('hidden');
+      } else {
+          themeToggleDarkIcon.classList.remove('hidden');
+          themeToggleLightIcon.classList.add('hidden');
+
+      }
+
+    var themeToggleBtn = document.getElementById('theme-toggle');
+
+    themeToggleBtn.addEventListener('click', function() {
+
+        // toggle icons inside button
+        themeToggleDarkIcon.classList.toggle('hidden');
+        themeToggleLightIcon.classList.toggle('hidden');
+
+        // if set via local storage previously
+        if (localStorage.getItem('color-theme')) {
+            if (localStorage.getItem('color-theme') === 'light') {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('color-theme', 'dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('color-theme', 'light');
+            }
+
+        // if NOT set via local storage previously
+        } else {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('color-theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('color-theme', 'dark');
+            }
+        }
+        
+    });
+
     </script>
 
     <script
