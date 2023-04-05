@@ -76,3 +76,14 @@ animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
 .font_playfair{
     font-family: 'Playfair Display', serif;
 }
+
+
+/* for input autocomplete */
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
+}
+input[data-autocompleted] {
+    background-color: transparent !important;
+}
