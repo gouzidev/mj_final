@@ -4,11 +4,11 @@
   rel="stylesheet"
 />
 
-<div class="nav py-4  dark:bg-gray-900" id="navigation">
-  <div class="md:fixed w-full top-0 md:z-[100]">
+<div class="nav md:py-2 bg-gradient-to-b dark:from-gray-700/30" id="navigation">
+  <div class="md:fixed w-full top-0 md:z-[100] ">
     <div
       id="spec_nav"
-      class="max-w-screen-xl duration-200 sticky flex flex-wrap justify-between items-center mx-auto md:px-6 px-4 py-3 rounded-xl mt-4"
+      class="max-w-screen-xl duration-200 sticky flex flex-wrap justify-between items-center mx-auto md:px-6 px-4 py-3 rounded-2xl mt-4"
     >
       <a
         href="/"
@@ -206,10 +206,21 @@
 
                         <form method="POST" class="flex items-center justify-center " action="{{route("logout")}}" aria-labelledby="dropdownDividerButton">
                           @csrf
-                          <button type="submit" class="font-lg bg-red-500 text-white   rounded-md px-3 py-2.5">
+                          <button data-popover-target="popover-bottom" data-popover-placement="bottom" type="submit" class="font-lg bg-red-500 text-white   rounded-md px-3 py-2.5">
                             <i class="fa-solid fa-right-from-bracket duration-150 hover:pr-4"></i>  
                             Deconnecter
                           </button> 
+
+                          <div data-popover id="popover-bottom" role="tooltip" class="absolute z-[100] invisible flex text-sm transition-opacity duration-300 border-gray-200 rounded-lg shadow-sm opacity-0 w-72 ">
+                            <div class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400 h-full" role="alert">
+                              En cliquant sur ce bouton, vous serez <b class="font-medium">déconnecté!</b>
+                            </div>
+                          </div>
+
+
+
+
+
                       </form>  
 
                 </div>

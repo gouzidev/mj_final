@@ -28,8 +28,8 @@
     @livewire('navbar')
     
     @livewire("app", ["articles" => $articles])
- 
 
+    
 
 
     @livewireScripts
