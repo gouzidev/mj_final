@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\ProfileController;
+use App\Models\Article;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,12 +17,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::prefix('/')->group(function () {
-    Route::get('/', function () {
-        return view("welcome");
-    });
-    Route::get('home', function () {
-        return view("welcome");
-    });
+    Route::get('/', ArticleController::class);
+    Route::get('home', ArticleController::class);
 });
 
 Route::get('/dashboard', function () {
