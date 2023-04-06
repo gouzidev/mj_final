@@ -6,8 +6,9 @@ use Livewire\Component;
 
 class App extends Component
 {
+    public $articles;
     public function render()
     {
-        return view('livewire.app');
+        return view('livewire.app', ["articles" => $this->articles]);
     }
 }
