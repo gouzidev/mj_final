@@ -35,8 +35,10 @@
     @endforeach --}}
     
     @foreach ($documents as $document)
-
-
+        <div id="img" class="">
+          <img src={{ "http://127.0.0.1:8000/" . $document["thumbnail"] }} class="h-full object-cover duration-200 
+        w-full " />
+        </div>
         <div
           class=" p-6 w-full bg-gradient-to-b from-transparent via-black/50 to-black/70 bottom-0 duration-300"
           id="description"
