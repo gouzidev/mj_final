@@ -14,7 +14,7 @@
                @livewire("categories.categories-names")
             </div>
             <div class="hidden lg:mt-0 lg:col-span-7 lg:flex">
-                {{-- @livewire("document-slider") --}}
+                @livewire("document-slider")
             </div>                
         </div>
     </section>
