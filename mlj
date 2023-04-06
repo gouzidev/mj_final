@@ -1,0 +1,159 @@
+[33mcommit e332cf57264f5b55666a03fdb7b05f6ab6142824[m[33m ([m[1;36mHEAD -> [m[1;32mmyOwnSlider[m[33m, [m[1;31morigin/myOwnSlider[m[33m)[m
+Author: abdoX1 <125511739+abdoX1@users.noreply.github.com>
+Date:   Thu Apr 6 05:44:19 2023 +0000
+
+    test
+
+[33mcommit 3637f1bd81d71983add6629899912ab1d66a6f44[m
+Author: Traam0 <chikhi.dev@gmail.com>
+Date:   Tue Apr 4 13:02:44 2023 +0100
+
+    vol 2 dark mode
+
+[33mcommit ba0d7d33a34957aa848b1006d499a79163b8dce9[m
+Author: Traam0 <chikhi.dev@gmail.com>
+Date:   Tue Apr 4 12:28:40 2023 +0100
+
+    dark mode added
+
+[33mcommit 6f4e5ae04d31e8db0a578c15c4804defab3e298e[m
+Author: gouzidev <gouzi.dev@gmail.com>
+Date:   Tue Apr 4 10:25:48 2023 +0000
+
+    fixing login
+
+[33mcommit 2f5873e40bab6270f9b7fd4de51c3570662185cf[m
+Author: gouzidev <gouzi.dev@gmail.com>
+Date:   Tue Apr 4 09:54:41 2023 +0000
+
+    fixing frontend linking with db
+
+[33mcommit ef85d2438d7603b690538641460d2ee2b8b86483[m
+Author: gouzidev <gouzi.dev@gmail.com>
+Date:   Tue Apr 4 09:58:04 2023 +0000
+
+    fixing frontend linking with db
+
+[33mcommit 3d6078421334f572af254f099653da2aba654ea6[m
+Author: Traam0 <chikhi.dev@gmail.com>
+Date:   Tue Apr 4 11:06:00 2023 +0100
+
+    mat9isch fe
+
+[33mcommit c4ac4b6acd1040bc53dc155208981eadc14ab0dc[m
+Author: Traam0 <chikhi.dev@gmail.com>
+Date:   Mon Apr 3 15:51:53 2023 +0100
+
+    added arrows
+
+[33mcommit 923eef65c7b9f4cbbb09df6fe0823f874b5640a2[m
+Author: Traam0 <younesmrx@outlook.com>
+Date:   Mon Apr 3 15:29:40 2023 +0100
+
+    home fiwed
+
+[33mcommit 01049f80734043b4762056c52c6aa790cfd3b37d[m
+Author: gouzidev <gouzi.dev@gmail.com>
+Date:   Mon Apr 3 11:26:47 2023 +0000
+
+    idk_what_that_is
+
+[33mcommit 34f6b31c683ee62d9c9ca53f9f02398ecb80933f[m
+Author: gouzidev <gouzi.dev@gmail.com>
+Date:   Mon Apr 3 10:26:57 2023 +0000
+
+    merge
+
+[33mcommit 12c0c2c2d64f5efd782ee155959610f0a9907eb1[m
+Author: gouzidev <gouzi.dev@gmail.com>
+Date:   Wed Mar 29 01:04:13 2023 +0000
+
+    added user functionality (kinda)
+
+[33mcommit 2a91f304cadca9ca22d08a067125e1f2c6040f4a[m
+Author: gouzidev <gouzi.dev@gmail.com>
+Date:   Wed Mar 29 00:41:23 2023 +0000
+
+    added name of project => DocManager (for now) change it from .env => APP_NAME
+
+[33mcommit 7598ec1e9fadf2b21543046c76e4dba747cc19c5[m
+Author: gouzidev <gouzi.dev@gmail.com>
+Date:   Wed Mar 29 00:38:35 2023 +0000
+
+    added articles
+
+[33mcommit 7ac662e18cc5d138f6b96fdae6597af4dc4496f4[m
+Author: gouzidev <gouzi.dev@gmail.com>
+Date:   Tue Mar 28 23:09:18 2023 +0000
+
+    added an other relation manager
+    
+    now can see and edit the documents that belong to a category
+
+[33mcommit 30d8c446f95a0aaeeca9bb5069dcef0dff1ac684[m
+Author: gouzidev <gouzi.dev@gmail.com>
+Date:   Tue Mar 28 22:59:21 2023 +0000
+
+    added relation manager
+    
+    now can see and edit the categorie related to a document
+
+[33mcommit f370bbfb2d4165a41792403bde9fbd85eb51f7ee[m
+Author: gouzidev <gouzi.dev@gmail.com>
+Date:   Tue Mar 28 22:43:41 2023 +0000
+
+    added displaying thumbnail image in table and form functionality
+
+[33mcommit ce39aeef771d6b1a24680d7d97ee1189db76c6b8[m
+Author: adnanemiftah <ultra.saidi6@gmail.com>
+Date:   Tue Mar 28 14:19:56 2023 +0200
+
+    test
+
+[33mcommit 742fb12bcf750e9060214ce8a0630af143a22ce6[m
+Author: adnanemiftah <ultra.saidi6@gmail.com>
+Date:   Mon Mar 27 14:31:36 2023 +0200
+
+    fix the upload image problem
+
+[33mcommit ce26dec045f0cbc3f6dea2288e9b97a911326632[m
+Author: adnanemiftah <ultra.saidi6@gmail.com>
+Date:   Mon Mar 27 13:16:53 2023 +0200
+
+    fix git ignore
+
+[33mcommit 23e6940621b92fdbbc85dafaf7f50468a8d519ad[m
+Author: adnanemiftah <ultra.saidi6@gmail.com>
+Date:   Mon Mar 27 13:15:44 2023 +0200
+
+    finish with document form (still have some issues)
+
+[33mcommit 6c0b9f4f12f511ea649ecf9cb5395baabc3066ae[m
+Author: adnanemiftah <ultra.saidi6@gmail.com>
+Date:   Mon Mar 27 12:06:25 2023 +0200
+
+    done with category (filament)
+
+[33mcommit 66bf5e6a1ea790a6140cd67b7eeb388e4030c042[m
+Author: adnanemiftah <ultra.saidi6@gmail.com>
+Date:   Fri Mar 24 13:00:44 2023 +0100
+
+    setup fillament
+
+[33mcommit cf4025181c70f02608ec213396f440cefa5e0d4d[m
+Author: gouzidev <gouzi.dev@gmail.com>
+Date:   Fri Mar 24 10:58:09 2023 +0000
+
+    added filament dashboard
+
+[33mcommit 2cb8284c5de352bdbad4eb650cdbe7511d7f8a42[m
+Author: adnanemiftah <ultra.saidi6@gmail.com>
+Date:   Fri Mar 24 11:36:45 2023 +0100
+
+    setup breeze
+
+[33mcommit f2fb2c23fdfda1c4c45303d69174bb1b5a14c51d[m
+Author: gouzidev <gouzi.dev@gmail.com>
+Date:   Fri Mar 24 09:54:54 2023 +0000
+
+    setup
