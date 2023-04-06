@@ -2,9 +2,9 @@
 
 
 <div class="container m-auto relative max-w-screen-lg">
-    <div class="glide overflow-hidden" id="abdoSlide">
+    <div class="glide overflow-hidden" id="document_slider">
         <div
-            class="glide__track flex"
+            class="glide__track flex" 
             data-glide-el="track">
             <ul class="glide__slides flex">
                 <li class="glide__slide w-full  flex justify-center  items-center">    
@@ -74,4 +74,4 @@
         </div>
     </div>
 </div>
-@vite(['resources/js/abdoslider.js'])
+@vite(['resources/js/document_slider.js'])
