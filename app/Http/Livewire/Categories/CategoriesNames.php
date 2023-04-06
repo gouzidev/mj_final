@@ -11,7 +11,6 @@ class CategoriesNames extends Component
     use WithPagination;
     public function render()
     {
-        return view('livewire.categories.categories-names', ["categories"=> Category::get()]);
+        return view('livewire.categories.categories-names', ["categories" => Category::get()]);
     }
-
 }

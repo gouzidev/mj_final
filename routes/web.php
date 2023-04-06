@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProfileController;
 use App\Models\Article;
+use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,6 +22,11 @@ Route::prefix('/')->group(function () {
     Route::get('/', ArticleController::class);
     Route::get('home', ArticleController::class);
 });
+
+Route::get("/category/{id}", [CategoryController::class, "show"])->name("category.show");
+// Route::get("test", function () {
+//     return view("category");
+// });
 
 Route::get('/dashboard', function () {
     return view('dashboard');
