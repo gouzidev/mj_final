@@ -11,7 +11,6 @@
     <ul class="my-4 space-y-3 ">
         @foreach ($categories as $category_index => $category)
             @livewire("categories.category-name", ["category" => $category , "category_index" => $category_index])
-
         @endforeach
     </ul>
    
