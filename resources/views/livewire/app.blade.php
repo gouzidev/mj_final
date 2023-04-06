@@ -71,6 +71,8 @@
 
     
     
+    @livewire("categories.categories-names", ["categories_names" =>["category 1", "category 2", "murder", "mysteries"]])
+    {{-- ["document", "cases", "murder", "mysteries"] --}}
     @livewire("footer")
 
     
