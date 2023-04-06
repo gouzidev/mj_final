@@ -1,15 +1,19 @@
-<div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-    <a href="#">
-        <img class="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
-    </a>
-    <div class="p-5">
-        <a href="#">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-        </a>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-            Read more
-            <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-        </a>
-    </div>
-</div>
+<?php
+
+namespace App\Http\Livewire;
+
+use Livewire\Component;
+
+class DocumentsSlider extends Component
+{
+    public $image = "https://maktbah.net/wp-content/uploads/2020/06/%D8%A7%D9%84%D8%B1%D8%A4%D9%8A%D8%A9-%D8%A7%D9%84%D8%A7%D8%B3%D9%84%D8%A7%D9%85%D9%8A%D8%A9-%D9%84%D9%84%D9%82%D8%A7%D9%86%D9%88%D9%86-%D8%A7%D9%84%D8%AF%D9%88%D9%84%D9%8A-%D8%A7%D9%84%D8%B9%D8%A7%D9%85-%D9%82%D8%A7%D8%B3%D9%85-%D8%AE%D8%B6%D8%B1-Maktbah.net-4.jpg";
+    public $image2 = "https://2.bp.blogspot.com/-FB3yGn0ffmM/UdhovtAq5oI/AAAAAAAANgw/dJ_7nEFgjiE/s1600/Dog-HD-Wallpaper-26.jpg";
+    public $image3 = "https://altibrah.ae/img/covers/1455bd268808ab253bcb12bd.jpg";
+    public function render()
+    {
+        return view('livewire.documents-slider', [
+            "image" => $this->image,
+            "image2" => $this->image2
+        ]);
+    }
+}
