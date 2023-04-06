@@ -5,10 +5,10 @@
 />
 
 <div class="nav md:py-2 bg-gradient-to-b dark:from-gray-700/30" id="navigation">
-  <div class="md:fixed w-full top-0 md:z-[100] ">
+  <div class="md:fixed w-full top-0 md:z-[100] bg-white/80 backdrop-blur-md dark:bg-gray-800/80">
     <div
       id="spec_nav"
-      class="max-w-screen-xl duration-200 sticky flex flex-wrap justify-between items-center mx-auto md:px-6 px-4 py-3 rounded-2xl mt-4"
+      class="max-w-screen-xl duration-200 flex flex-wrap justify-between items-center mx-auto md:px-6 px-4 py-3  my-2 bg-transparent"
     >
       <a
         href="/"
@@ -292,11 +292,11 @@
         if (window.scrollY >= navTop) {
           spec_nav.classList.add("scale-105");
           spec_nav.classList.add("drop-shadow-md");
-          spec_nav.classList.add("bg-white","dark:bg-gray-800");
+          spec_nav.classList.add("bg-white")
         } else {
           spec_nav.classList.remove("scale-105");
           spec_nav.classList.remove("drop-shadow-md");
-          spec_nav.classList.remove("bg-white","dark:bg-gray-800");
+          spec_nav.classList.remove("bg-white");
         }
       });
 

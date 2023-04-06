@@ -4,17 +4,14 @@ namespace App\Http\Livewire\Categories;
 
 use App\Models\Category;
 use Livewire\Component;
+use LiveWire\WithPagination;
 
 class CategoriesNames extends Component
 {
-    public $categories;
-    // public $categories = Category::get();
+    use WithPagination;
     public function render()
     {
-        return view('livewire.categories.categories-names');
+        return view('livewire.categories.categories-names', ["categories"=> Category::get()]);
     }
-    public function mount()
-    {
-        $this->categories = Category::get();
-    }
+
 }
