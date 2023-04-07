@@ -6,8 +6,9 @@ use Livewire\Component;
 
 class SearchDocument extends Component
 {
+    public $categories;
     public function render()
     {
-        return view('livewire.search-document');
+        return view('livewire.search-document', ["categories" => $this->categories]);
     }
 }

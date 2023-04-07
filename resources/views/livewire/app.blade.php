@@ -10,10 +10,9 @@
 
     @livewire("gallery",["articles"=> $articles])
 
-    
     <div class="mx-auto max-w-screen-xl px-4  py-8 lg:gap-8 xl:gap-0 lg:py-16">
         <div class="px-4">
-        @livewire("search-document")
+        @livewire("search-document", compact("articles", "categories"))
         </div>
         <section class="md:flex ">
                 <div class=" w-full lg:w-2/3 flex justify-center">
