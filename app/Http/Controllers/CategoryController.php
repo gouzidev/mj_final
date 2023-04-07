@@ -14,6 +14,12 @@ class CategoryController extends Controller
 
         return view("welcome", compact("categories"));
     }
+    public function categories_view()
+    {
+        $categories = Category::with('documents')->get();
+
+        return view("livewire.categories-page", compact("categories"));
+    }
     public function show($id)
     {
         $documents = Category::find($id)->documents;

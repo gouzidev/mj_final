@@ -11,4 +11,10 @@ class ArticleController extends Controller
         $articles = Article::get();
         return view("welcome", compact("articles"));
     }
+    public function articles_view()
+    {
+        $articles = Article::get();
+
+        return view("livewire.articles-page", compact("articles"));
+    }
 }

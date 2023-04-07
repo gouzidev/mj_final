@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\DocumentController;
 use App\Http\Controllers\ProfileController;
 use App\Models\Article;
 use App\Models\Category;
@@ -23,6 +24,9 @@ Route::prefix('/')->group(function () {
     Route::get('home', ArticleController::class);
 });
 
+Route::get("/documents", [DocumentController::class, "documents_view"])->name("documents");
+Route::get("/articles", [ArticleController::class, "articles_view"])->name("articles");
+Route::get("/categories", [CategoryController::class, "categories_view"])->name("categories");
 Route::get("/category/{id}", [CategoryController::class, "show"])->name("category.show");
 // Route::get("test", function () {
 //     return view("category");
