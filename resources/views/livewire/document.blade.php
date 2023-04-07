@@ -1,7 +1,7 @@
 
 
 
-<div class="shadow-card flex flex-col rounded-xl bg-clip-border ">
+<div class="shadow-card flex flex-col rounded-xl bg-clip-border">
   <div class="mx-4 -mt-6 translate-y-0">
     <a href="#" blur-shadow-image="true">
       <img

@@ -35,4 +35,5 @@
   </div>
 
 
+
   @vite("resources/js/navbar.js")

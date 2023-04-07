@@ -4,9 +4,8 @@
     $limiter = 400;
 @endphp
 
+<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@^3.4.1/dist/glide.min.js"></script>
 <div class="w-full min-h-screen">
-         
-    
 
 
     @livewire("gallery",["articles"=> $articles])
@@ -21,8 +20,8 @@
                 @livewire("categories.categories-names")
                 </div>
                 <div class=" w-full lg:w-2/3 lg:flex-row ">
-                    @livewire("document-slider",["slider_id"=>0])
-                    @livewire("document-slider",["slider_id"=>1])
+                    @livewire("document-slider",["key"=>0])
+                    @livewire("document-slider",["key"=>1])
                 </div>                
             
         </section>

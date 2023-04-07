@@ -22,11 +22,15 @@
     @livewireStyles
 
 </head>
-<body class="p-2 md:p-0 flex-wrap dark:bg-gray-800 ">
-    @livewire('navbar')
-    
-    @livewire("app", ["articles" => $articles])
+<body class="p-2 md:p-0 flex-wrap dark:bg-gray-900 ">
 
+   
+    @livewire('navbar')
+    @foreach ($documents as $doc)
+        <h1>doc name : {{ $doc->title }}</h1>
+        <h1>cat name : {{ $doc->category->category_name }}</h1>
+        <br>
+    @endforeach
     @livewireScripts
 
 </body>

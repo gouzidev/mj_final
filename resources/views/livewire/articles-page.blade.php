@@ -22,11 +22,13 @@
     @livewireStyles
 
 </head>
-<body class="p-2 md:p-0 flex-wrap dark:bg-gray-800 ">
-    @livewire('navbar')
-    
-    @livewire("app", ["articles" => $articles])
+<body class="p-2 md:p-0 flex-wrap dark:bg-gray-900 ">
 
+   
+    @livewire('navbar')
+    @foreach ($articles as $aticle)
+        <h1>name : {{ $aticle->title }}</h1>
+    @endforeach
     @livewireScripts
 
 </body>
