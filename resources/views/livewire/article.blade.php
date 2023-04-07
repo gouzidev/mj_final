@@ -1,6 +1,5 @@
 
 <div class="glide__slide h-full relative rounded-lg">
-
       <div id="img" class="">
         <img src="{{$data["thumbnail"]}}" class=" h-full object-cover duration-200 
       w-full " />

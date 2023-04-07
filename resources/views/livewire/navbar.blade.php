@@ -162,8 +162,6 @@
               <i class="fa-solid fa-moon"></i>
             </svg>
         </button>
-
-
             @if(!Auth::user()) 
             <a href="{{route("login")}}">
                 <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5  dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
@@ -171,49 +169,31 @@
                   Connexion
                 </button> 
             </a>    
-        
             @else
-
-                                
                 <button id="dropdownDividerButton" data-dropdown-toggle="dropdownDivider" class="text-dark dark:text-white focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center" type="button">
                   <i class="fa-regular fa-user pr-2"></i>
                   {{ Auth::user()->name }}
                   <svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                 </button>
-
                 <!-- Dropdown menu -->
                 <div id="dropdownDivider" class="z-10 hidden">
-
                         <form method="POST" class="flex items-center justify-center " action="{{route("logout")}}" aria-labelledby="dropdownDividerButton">
                           @csrf
                           <button data-popover-target="popover-bottom" data-popover-placement="bottom" type="submit" class="font-lg bg-red-500 text-white   rounded-md px-3 py-2.5">
                             <i class="fa-solid fa-right-from-bracket duration-150 hover:pr-4"></i>  
                             Deconnecter
                           </button> 
-
                           <div data-popover id="popover-bottom" role="tooltip" class="absolute z-[100] invisible flex text-sm transition-opacity duration-300 border-gray-200 rounded-lg shadow-sm opacity-0 w-72 ">
                             <div class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400 h-full" role="alert">
                               En cliquant sur ce bouton, vous serez <b class="font-medium">déconnecté!</b>
                             </div>
                           </div>
-
-
-
-
-
                       </form>  
-
                 </div>
-
-
             @endif
-
-            
         </div>
       </div>
     </div>
-
-
     <script
       src="https://kit.fontawesome.com/ba496a122f.js"
       crossorigin="anonymous"
