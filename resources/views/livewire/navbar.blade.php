@@ -102,57 +102,12 @@
               </ul>
             </div>
           </li>
-          <li
-            class="py-2 pr-4text-gray-500 sm:mb-0 dark:text-gray-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
-          >
-            <button
-              id="dropdownDefaultButton2"
-              data-dropdown-toggle="dropdown2"
-              class="pl-3 flex items-center hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
-              type="button"
-            >
-              Centre
-              <svg
-                class="w-4 h-4 ml-2"
-                aria-hidden="true"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M19 9l-7 7-7-7"
-                ></path>
-              </svg>
-            </button>
-            <!-- Dropdown menu -->
-            <div
-              id="dropdown2"
-              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
-            >
-              <ul
-                class="p-2 text-smtext-gray-500 sm:mb-0 dark:text-gray-400 dark:bg-gray-900 rounded-md "
-                aria-labelledby="dropdownDefaultButton1"
-              >
-                <li>
-                  <a
-                    href="#"
-                    class="block px-4 py-2 text-gray-500 dark:text-while hover:text-white hover:bg-slate-800 rounded-md"
-                    >EXM</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </li>
           <li>
             <a
-              href="#"
+              href="{{ route("documents") }}"
               class="block py-2 pl-3 pr-4text-gray-500 sm:mb-0 dark:text-gray-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
-              >Documents</a
-            >
+              >Documents
+            </a>
           </li>
           <li class="flex">
             <a
