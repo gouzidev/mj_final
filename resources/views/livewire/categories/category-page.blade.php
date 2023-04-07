@@ -19,25 +19,19 @@
     </script>
     @vite(['resources/css/app.css'])
 
-
-
     @livewireStyles
 
 </head>
 <body class="p-2 md:p-0 flex-wrap dark:bg-gray-900 ">
-    @livewire('navbar')
-    
-    {{-- @livewire("app", ["articles" => $articles]) --}}
-    {{-- @foreach ($documents as $document)
-        <p>{{ $document->title }}</p> 
-        <p>{{ $document->file }}</p> 
-        <p>{{ $document->thumbnail }}</p> 
-    @endforeach --}}
+    @livewire('nav-fixed')
     
     @foreach ($documents as $document)
-        <div id="img" class="">
-          <img src={{ "http://127.0.0.1:8000/" . $document["thumbnail"] }} class="h-full object-cover duration-200 
-        w-full " />
+      @livewire("categories.category-card", ["document" => $document])
+        {{-- <div id="img" class="">
+          <img src=
+            {{ env("APP_URL") . "/" . $document["thumbnail"] }}
+            class="h-full object-cover duration-200 w-full "
+          />
         </div>
         <div
           class=" p-6 w-full bg-gradient-to-b from-transparent via-black/50 to-black/70 bottom-0 duration-300"
@@ -55,9 +49,9 @@
           >
             {{ $document["content"] }}
           </p>
-        </div>
+        </div> --}}
   
-        @endforeach
+    @endforeach
     
         @livewireScripts
 
