@@ -12,9 +12,10 @@ class DocumentSlider extends Component
             "title"=>"Scanned Document | PDF Host"
         ],
     ];
+    public $slider_id;
     public function render()
     
     {
-        return view('livewire.document-slider', ["documents"=>$this->documents]);
+        return view('livewire.document-slider', ["documents"=>$this->documents, "slider_id" => $this->id]);
     }
 }
