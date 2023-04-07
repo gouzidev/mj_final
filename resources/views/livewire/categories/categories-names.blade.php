@@ -9,7 +9,7 @@
   
     
     <ul class="my-4 space-y-3 ">
-        @foreach ($categories as $category_index => $category)
+        {{-- @foreach ($categories as $category_index => $category)
             @livewire(
                 "categories.category-name", 
                 [
@@ -17,7 +17,21 @@
                  "category_index" => $category_index
                 ]
             )
+        @endforeach --}}
+
+        @foreach ($categories as $category_index => $category)
+            @livewire("categories.category-name", 
+                [
+                    "data" =>
+                        [
+                            "category" => $category,
+                            "category_index" => $category_index,
+                            "docs_count_per_cat" => count($category->documents) 
+                        ]
+                ]
+            )
         @endforeach
+
     </ul>
    
 
