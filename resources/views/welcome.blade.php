@@ -19,23 +19,16 @@
     </script>
     @vite(['resources/css/app.css'])
 
-
-
     @livewireStyles
 
 </head>
 <body class="p-2 md:p-0 flex-wrap dark:bg-gray-900 ">
+
     @livewire('navbar')
     
     @livewire("app", ["articles" => $articles])
 
-    
-
-
     @livewireScripts
-
-
-
 
 </body>
 </html>

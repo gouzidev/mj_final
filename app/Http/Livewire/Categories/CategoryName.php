@@ -11,8 +11,8 @@ class CategoryName extends Component
     public function render()
     {
         return view('livewire.categories.category-name', [
-        "category" => $this->category,
-        "category_index" => $this->category_index
-    ]);
+            "category" => $this->category,
+            "category_index" => $this->category_index
+        ]);
     }
 }
