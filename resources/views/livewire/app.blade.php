@@ -11,15 +11,16 @@
     @livewire("gallery",["articles"=> $articles])
 
     
-    <div class="mx-auto max-w-screen-xl px-4  py-8 lg:gap-8 xl:gap-0 lg:py-16">
-        <div class="px-4">
+    <div class="mx-auto max-w-screen-xl px-4  py-8 lg:gap-8 xl:gap-0 lg:py-16 fade-in">
+        <div class="">
         @livewire("search-document")
         </div>
-        <section class="md:flex ">
-                <div class=" w-full lg:w-2/3 flex justify-center">
-                @livewire("categories.categories-names")
+        <section class="md:flex space-x-2">
+                <div class=" w-full lg:w-2/3  flex justify-center">
+                    @livewire("categories.categories-names")
                 </div>
-                <div class=" w-full lg:w-2/3 lg:flex-row ">
+                
+                <div class=" w-full lg:w-2/3 md:w-1/2 lg:flex-row ">
                     @livewire("document-slider",["key"=>0])
                     @livewire("document-slider",["key"=>1])
                 </div>                

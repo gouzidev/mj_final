@@ -87,3 +87,13 @@ input:-webkit-autofill:focus {
 input[data-autocompleted] {
     background-color: transparent !important;
 }
+
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.visible {
+  opacity: 1;
+}

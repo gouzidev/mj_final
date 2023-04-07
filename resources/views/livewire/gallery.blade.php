@@ -43,8 +43,8 @@
     @else
         <div class="text-2xl dark:text-white text-center flex-row">
             <div class="mb-2 ">
-                <i class="fa-solid fa-hourglass text-rose-700"></i>
-                Empty gallery
+                <i class="fa-solid fa-eye-low-vision text-rose-400"></i>
+                Galerie vide
             </div>
             <small class="text-sm text-gray-700 dark:text-gray-400">Aucune image trouvée pour le moment !</small>
         </div>

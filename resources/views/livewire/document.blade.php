@@ -1,15 +1,15 @@
 
 
 
-<div class="shadow-card flex flex-col rounded-xl bg-clip-border">
+<div class="shadow-card flex flex-col rounded-xl bg-clip-border ">
   <div class="mx-4 -mt-6 translate-y-0">
-    <a href="#" blur-shadow-image="true">
+    <div class="h-2/3 w-full" blur-shadow-image="true">
       <img
-        class="w-auto rounded-lg duration-300 hover:scale-110"
+        class="h-full w-full rounded-lg duration-300 hover:scale-110"
         src="{{$data["image"]}}"
         alt="card image"
       />
-    </a>
+    </div>
   </div>
   <div class="text-secondary flex-1 p-6">
     <a href="#">

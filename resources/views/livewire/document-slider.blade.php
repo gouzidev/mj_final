@@ -1,12 +1,13 @@
 
 <div class="">
     
-    <div class="container m-auto relative max-w-screen-lg w-full">
-        <div class="inline-flex items-center w-full dark:text-white">
+    <div class=" max-w-screen-lg w-full">
+        <div class="inline-flex items-center justify-center w-full dark:text-white">
+            
             <div class="text-xl mr-2">Heading</div>
-            <hr class="w-full h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+
         </div>
-        <div class="glide overflow-hidden" id="documents_slider{{$key}}">
+        <div class="glide overflow-hidden " id="documents_slider{{$key}}">
             <div
                 class="glide__track flex" 
                 data-glide-el="track">
@@ -18,8 +19,10 @@
                     @endforeach
                     
                 </ul>
+                
             </div>
-            <div
+
+            {{-- <div
                 class="glide__arrows flex items-center"
                 data-glide-el="controls">
                 <button
@@ -31,7 +34,7 @@
                     data-glide-dir=">">
                     <i class="fa-solid fa-chevron-right"></i>
                 </button>
-            </div>
+            </div> --}}
         </div>
     </div>
 </div>
@@ -39,12 +42,12 @@
 <script>
     var glide = new Glide("#documents_slider{{$key}}", {
         type: "carousel",
-        perView: 3,
+        perView: 4,
         autoplay: 4000,
         breakpoints: {
-            800: {
-                perView: 1,
-            },
+            1030:{
+                perView: 3
+            }
         },
     });
 

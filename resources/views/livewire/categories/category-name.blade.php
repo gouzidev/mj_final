@@ -12,9 +12,17 @@
 </li>
 
   
-<div data-popover id={{"popover-right".$category->id}} role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
+<div data-popover id={{"popover-right".$category->id}} role="tooltip" class="absolute z-10 invisible inline-block max-w-sm text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
     <div class="px-3 py-2">
         <p>{{$category->category_name}}</p>
+        <div>Contient 
+            <span class="font-semibold text-yellow-500">{{ $docs_count_per_cat }} </span>
+            @if($docs_count_per_cat != 1)
+                documents
+            @else
+                document
+            @endif
+        </div>
     </div>
     <div data-popper-arrow></div>
 </div>
