@@ -12,7 +12,7 @@
 
     <div class="mx-auto max-w-screen-xl px-4  py-8 lg:gap-8 xl:gap-0 lg:py-16">
         <div class="px-4">
-        @livewire("search-document", compact("articles", "categories"))
+        @livewire("search-document", compact("articles", "categories_and_docs"))
         </div>
         <section class="md:flex space-x-2">
                 <div class=" w-full lg:w-2/3  flex justify-center">
@@ -22,6 +22,11 @@
                 <div class=" w-full lg:w-2/3 md:w-1/2 lg:flex-row ">
                     @livewire("document-slider",["key"=>0])
                     @livewire("document-slider",["key"=>1])
+                
+                    {{-- @foreach ($categories_and_docs as $category)
+                        {{ $category->category_name }}
+                    @endforeach --}}
+                    
                 </div>                
             
         </section>

@@ -13,9 +13,12 @@ class HomeController extends Controller
     public function __invoke()
     {
         $articles = Article::get();
-        $categories = Category::get();
+
+        $categories_and_docs = Category::with('documents')->get();
+
         $documents = Document::get();
 
-        return view("welcome", compact("articles", "categories", "documents"));
+
+        return view("welcome", compact("articles", "categories_and_docs", "documents"));
     }
 }

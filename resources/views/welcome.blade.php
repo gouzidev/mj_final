@@ -29,7 +29,7 @@
     @livewire("app",
         [
             "articles" => $articles,
-            "categories" => $categories,
+            "categories_and_docs" => $categories_and_docs,
             "documents" => $documents
         ])
 
