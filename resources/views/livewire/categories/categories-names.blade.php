@@ -1,5 +1,5 @@
 
-<div class="w-full p-4 border-r md:border-l md:border-gray-200 sm:p-6 dark:border-gray-700">
+<div class="w-full p-4 md:border-r md:border-gray-200 sm:p-6 dark:border-gray-700">
     <div  class="flex items-center ">
         <h5 class="mb-3 text-base font-semibold text-gray-900 md:text-xl dark:text-white">
             Categories

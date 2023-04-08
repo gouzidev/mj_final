@@ -38,7 +38,7 @@
         >
           <li>
             <a
-              href="#"
+              href="/home"
               class="block py-2 pl-3 pr-4text-gray-500 sm:mb-0 dark:text-gray-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
               >Accuei</a
             >

@@ -7,9 +7,12 @@ use Livewire\Component;
 class Document extends Component
 {
 
-    public $data;
+    public $data, $category;
     public function render()
     {
-        return view('livewire.document', ["data"=>$this->data]);
+        return view('livewire.document', [
+            "data"=>$this->data,
+            "category"=>$this->category
+        ]);
     }
 }
