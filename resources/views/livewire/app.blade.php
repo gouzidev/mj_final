@@ -24,7 +24,7 @@
                         @livewire("document-slider",["documents" => $category->documents, "key"=>$category_index])
                     @endforeach
                 </div>                
-ùµ        </section>
+        </section>
 
     </div>
     
