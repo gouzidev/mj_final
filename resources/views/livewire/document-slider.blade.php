@@ -4,7 +4,7 @@
     <div class=" max-w-screen-lg w-full">
         <div class="inline-flex items-center justify-center w-full dark:text-white">
             
-            <div class="text-xl mr-2">Heading</div>
+            <div class="text-xl mr-2">{{ $category->category_name }}</div>
 
         </div>
         <div class="glide overflow-hidden " id="documents_slider{{$key}}">
@@ -12,9 +12,9 @@
                 class="glide__track flex" 
                 data-glide-el="track">
                 <ul class="glide__slides flex ">
-                    @foreach($documents as $document)
+                    @foreach($category->documents as $doc)
                         <li class="glide__slide w-full  flex justify-center items-center">    
-                            @livewire("document", ["data"=>$document])
+                            @livewire("document", ["document" => $doc])
                         </li>
                     @endforeach
                     

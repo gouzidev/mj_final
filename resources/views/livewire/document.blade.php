@@ -5,8 +5,8 @@
     if(isset($category)){
       $size = "md:w-[250px] md:h-[450px]";
     }
+    // dd($document)
 @endphp
-
 
 
 <div class="shadow-card flex flex-col rounded-xl bg-clip-border {{$size}}">
@@ -14,19 +14,19 @@
     <div class="h-full w-full" blur-shadow-image="true">
       <img
         class="h-full w-full duration-300 hover:scale-110 object-cover"
-        src="{{asset($data["thumbnail"])}}"
-        alt="{{$data["title"]}}"
+        src="{{asset($document["thumbnail"])}}"
+        alt="{{$document["title"]}}"
       />
     </div>
   </div>
   <div class="text-secondary flex-1 p-6">
     <div >
       <h4 class="font-medium dark:text-white">
-        {{limitString($data["title"],50)}}
+        {{limitString($document["title"],50)}}
       </h4>
     </div>
     <small class="text-gray-700 dark:text-gray-500">
-      Créé à {{$data["created_at"]}}
+      Créé à {{$document["created_at"]}}
     </small>
     @isset($category)
       <div class="py-4 text-gray-800 dark:text-gray-400">
@@ -41,7 +41,9 @@
       data-ripple-light="true"
     >
     <i class="fa-solid fa-arrow-down mr-3"></i>
-      Télécharger
+      <a download href={{ env("APP_URL") . "/" . $document->file }}>
+        Télécharger
+      </a>
     </button>
   </div>
 </div>

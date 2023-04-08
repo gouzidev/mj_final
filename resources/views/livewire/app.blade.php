@@ -21,7 +21,10 @@
                 
                 <div class=" w-full lg:w-2/3 md:w-1/2 lg:flex-row ">
                     @foreach ($categories_and_docs as $category_index => $category)
-                        @livewire("document-slider",["documents" => $category->documents, "key"=>$category_index])
+                        @livewire("document-slider",[
+                            "category" => $category,
+                            "documents" => $category->documents,
+                            "key" => $category_index])
                     @endforeach
                 </div>                
         </section>

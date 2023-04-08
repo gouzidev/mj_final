@@ -35,7 +35,6 @@
 
                 <div class="py-2">
                     @livewire("document", ["data"=>$doc])
-
                 </div>
         @endforeach
         
