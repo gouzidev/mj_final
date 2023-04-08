@@ -20,16 +20,11 @@
                 </div>
                 
                 <div class=" w-full lg:w-2/3 md:w-1/2 lg:flex-row ">
-                    @livewire("document-slider",["key"=>0])
-                    @livewire("document-slider",["key"=>1])
-                
-                    {{-- @foreach ($categories_and_docs as $category)
-                        {{ $category->category_name }}
-                    @endforeach --}}
-                    
+                    @foreach ($categories_and_docs as $category_index => $category)
+                        @livewire("document-slider",["documents" => $category->documents, "key"=>$category_index])
+                    @endforeach
                 </div>                
-            
-        </section>
+ùµ        </section>
 
     </div>
     
