@@ -22,15 +22,29 @@
     @livewireStyles
 
 </head>
-<body class="p-2 md:p-0 flex-wrap dark:bg-gray-900 ">
+<body class="p-2 md:p-0 dark:bg-gray-900">
 
    
     @livewire('navbar')
-    @foreach ($documents as $doc)
-        <h1>doc name : {{ $doc->title }}</h1>
-        <h1>cat name : {{ $doc->category->category_name }}</h1>
-        <br>
-    @endforeach
+
+    
+    <h2 class="dark:text-gray-400 w-full max-w-screen-xl mx-auto p-4 text-2xl">
+        Les documents
+    </h2>
+    <div class=" max-w-screen-xl mx-auto flex flex-wrap py-4 ">
+        
+
+        @foreach ($documents as $doc)
+
+                <div class="py-2">
+                    @livewire("document", ["data"=>$doc, "category"=>$doc->category->category_name])
+
+                </div>
+        @endforeach
+        
+    </div>  
+    
+
     @livewireScripts
 
 </body>

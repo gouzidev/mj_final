@@ -20,8 +20,15 @@
                 </div>
                 
                 <div class=" w-full lg:w-2/3 md:w-1/2 lg:flex-row ">
-                    @livewire("document-slider",["key"=>0])
-                    @livewire("document-slider",["key"=>1])
+                    @foreach ($categories_slides as $catergories_slide)
+                        @foreach ($catergories_slide as $catergories_doc)
+                            @php
+                                dd($catergories_doc)
+                            @endphp
+                        @endforeach
+                        @livewire("document-slider",["key"=>$catergories_slide->id])   
+                    @endforeach
+                    
                 </div>                
             
         </section>

@@ -22,37 +22,28 @@
     @livewireStyles
 
 </head>
-<body class="p-2 md:p-0 flex-wrap dark:bg-gray-900 ">
-    @livewire('nav-fixed')
+<body class="p-2 md:p-0 flex-wrap dark:bg-gray-900">
     
-    @foreach ($documents as $document)
-      @livewire("categories.category-card", ["document" => $document])
-        {{-- <div id="img" class="">
-          <img src=
-            {{ env("APP_URL") . "/" . $document["thumbnail"] }}
-            class="h-full object-cover duration-200 w-full "
-          />
-        </div>
-        <div
-          class=" p-6 w-full bg-gradient-to-b from-transparent via-black/50 to-black/70 bottom-0 duration-300"
-          id="description"
-          >
-          <a href="#">
-            <h5
-              class="mb-2 text-2xl font-bold tracking-tight text-white"
-            >
-              {{ $document["title"] }}
-            </h5>
-          </a>
-          <p
-            class="mb-3 font-normal text-gray-300 flex h-24 overflow-hidden"
-          >
-            {{ $document["content"] }}
-          </p>
-        </div> --}}
-  
-    @endforeach
+
+      
+    @livewire('navbar')
     
+    <div class=" max-w-screen-xl mx-auto flex flex-wrap py-4 ">
+        
+
+        @foreach ($documents as $doc)
+
+                <div class="py-2">
+                    @livewire("document", ["data"=>$doc])
+
+                </div>
+        @endforeach
+        
+    </div>  
+    
+
+
+
         @livewireScripts
 
 </body>

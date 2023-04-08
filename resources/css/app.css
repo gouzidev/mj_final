@@ -97,3 +97,10 @@ input[data-autocompleted] {
 .visible {
   opacity: 1;
 }
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+.scrollbar-show::-webkit-scrollbar {
+    display: flex;
+}
