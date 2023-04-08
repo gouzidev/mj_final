@@ -23,19 +23,15 @@
 
 </head>
 <body class="p-2 md:p-0 flex-wrap dark:bg-gray-900">
-    
-
       
     @livewire('navbar')
     
     <div class=" max-w-screen-xl mx-auto flex flex-wrap py-4 ">
         
-
         @foreach ($documents as $doc)
-
-                <div class="py-2">
-                    @livewire("document", ["data"=>$doc])
-                </div>
+            <div class="py-2">
+                @livewire("document", ["document"=>$doc])
+            </div>
         @endforeach
         
     </div>  

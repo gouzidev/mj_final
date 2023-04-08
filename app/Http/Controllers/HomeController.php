@@ -18,7 +18,6 @@ class HomeController extends Controller
 
         $documents = Document::get();
 
-
         return view("welcome", compact("articles", "categories_and_docs", "documents"));
     }
 }

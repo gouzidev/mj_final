@@ -2,12 +2,10 @@
 @php
     require_once(resource_path("imports/limitString.php"));
     $size = "md:w-[250px] md:h-[400px]";
-    if(isset($category)){
+    if(isset($category_name)){
       $size = "md:w-[250px] md:h-[450px]";
     }
-    // dd($document)
 @endphp
-
 
 <div class="shadow-card flex flex-col rounded-xl bg-clip-border {{$size}}">
   <div class="mx-4 -mt-6 translate-y-0 h-2/3 overflow-hidden">
@@ -28,11 +26,11 @@
     <small class="text-gray-700 dark:text-gray-500">
       Créé à {{$document["created_at"]}}
     </small>
-    @isset($category)
+    @isset($category_name)
       <div class="py-4 text-gray-800 dark:text-gray-400">
         <small>Catégorie:</small>
         <div class="text-yellow-700  dark:text-yellow-500 text-sm flex">
-            {{ limitString($category, 30)}}
+            {{ limitString($category_name, 30)}}
         </div>
       </div>
     @endisset

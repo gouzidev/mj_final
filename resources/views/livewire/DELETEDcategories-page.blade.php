@@ -40,7 +40,9 @@
     
                 @foreach ($categories as $cat)
 
-                    
+                    @php
+                        dd($cat)
+                    @endphp
                     <div class=" ">
                         <div class="" >
                             <ol class="inline-flex items-center mb-3 sm:mb-0">

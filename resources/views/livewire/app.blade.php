@@ -20,11 +20,11 @@
                 </div>
                 
                 <div class=" w-full lg:w-2/3 md:w-1/2 lg:flex-row ">
-                    @foreach ($categories_and_docs as $category_index => $category)
+                    @foreach ($categories_and_docs as $category)
+                        {{-- gets the docs from cat (look for categories_and_docs => (CTRL + F)) --}}
                         @livewire("document-slider",[
                             "category" => $category,
-                            "documents" => $category->documents,
-                            "key" => $category_index])
+                            "key" => $category->id])
                     @endforeach
                 </div>                
         </section>

@@ -1,14 +1,13 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Http\Livewire\Categories;
 
 use Livewire\Component;
 
 class CategoryPage extends Component
 {
-    public $category;
     public function render()
     {
-        return view('livewire.category-page');
+        return view('livewire.categories.category-page');
     }
 }

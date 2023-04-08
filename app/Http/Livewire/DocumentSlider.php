@@ -24,11 +24,10 @@ class DocumentSlider extends Component
     public $category;
     public $key;
     public function render()
-
     {
         return view('livewire.document-slider', [
             "category" => $this->category,
-            "documents" => $this->documents,
+            "documents" => $this->category->documents,
             "key" => $this->key
         ]);
     }

@@ -11,10 +11,13 @@
             <div
                 class="glide__track flex" 
                 data-glide-el="track">
-                <ul class="glide__slides flex ">
+                <ul class="glide__slides flex">
                     @foreach($category->documents as $doc)
                         <li class="glide__slide w-full  flex justify-center items-center">    
-                            @livewire("document", ["document" => $doc])
+                            @livewire("document", [
+                                "document" => $doc,
+                                "category_name" => $category->category_name
+                            ])
                         </li>
                     @endforeach
                     

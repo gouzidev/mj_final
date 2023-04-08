@@ -37,8 +37,7 @@
         @foreach ($documents as $doc)
 
                 <div class="py-2">
-                    @livewire("document", ["data"=>$doc, "category"=>$doc->category->category_name])
-
+                    @livewire("document", ["document"=>$doc, "category_name"=>$doc->category->category_name])
                 </div>
         @endforeach
         
