@@ -7,7 +7,9 @@
 <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@^3.4.1/dist/glide.min.js"></script>
 <div class="w-full min-h-screen">
 
-
+    <div class="mx-auto max-w-screen-xl">
+        @livewire("articles-search")
+    </div>
     @livewire("gallery",["articles"=> $articles])
 
     <div class="mx-auto max-w-screen-xl px-4  py-8 lg:gap-8 xl:gap-0 lg:py-16">
@@ -19,12 +21,14 @@
                     @livewire("categories.categories-names")
                 </div>
                 
-                <div class=" w-full lg:w-2/3 md:w-1/2 lg:flex-row ">
+                <div class="md:px-2 w-full lg:w-2/3 md:w-1/2 lg:flex-row ">
                     @foreach ($categories_and_docs as $category)
                         {{-- gets the docs from cat (look for categories_and_docs => (CTRL + F)) --}}
-                        @livewire("document-slider",[
-                            "category" => $category,
-                            "key" => $category->id])
+                        @if (count($category->documents))
+                            @livewire("document-slider",[
+                                "category" => $category,
+                                "key" => $category->id]) 
+                        @endif
                     @endforeach
                 </div>                
         </section>
@@ -33,7 +37,6 @@
     
     @livewire("footer")
 
-    
 
     <div wire:loading>
         Loading...

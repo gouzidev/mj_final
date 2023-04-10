@@ -14,7 +14,7 @@
     require_once(resource_path("imports/limitString.php"))
 @endphp
 
-<div class=" overflow-hidden relative">
+<div class="mx-auto max-w-screen-xl overflow-hidden relative rounded-md ">
     
     {{-- <div class="bg-white absolute left-0 h-full"></div> --}}
 
@@ -23,7 +23,7 @@
         {{-- bg-gradient-to-r from-transparent to-white/30 --}}
         <div class="glide__track overflow-hidden" data-glide-el="track">
             
-        <ul class="glide__slides flex">
+        <ul class="glide__slides flex ">
             
                 @foreach ($articles as $article)
                         @livewire('article', ['data' => $article])
@@ -31,14 +31,16 @@
                 
             </ul>
         </div>
-        <div class="glide__arrows absolute top-0 w-full h-full text-white hidden md:block" data-glide-el="controls">
-            <button class="glide__arrow glide__arrow--right px-4 py-2 float-left bg-gradient-to-r from-white/50 dark:from-gray-900 to-transparent h-full md:w-1/4" data-glide-dir="<">
-                <i class="fa-solid fa-caret-left text-xl "></i>
-            </button>
-            <button class=" glide__arrow glide__arrow--right px-4 py-2 rounded-lg float-right bg-gradient-to-l from-white/50 dark:from-gray-900 to-transparent h-full md:w-1/4" data-glide-dir=">">
-                <i class="fa-solid fa-caret-right text-xl"></i>
-            </button>
+        <div class="pointer-events-none glide__arrows absolute top-0 w-full h-full text-white hidden md:block" data-glide-el="controls">
+            <div class="float-left bg-gradient-to-r dark:from-gray-900 to-transparent h-full md:w-1/4 flex items-center justify-center">
+                
+            </div>
+            <div class="float-right bg-gradient-to-l dark:from-gray-900 to-transparent h-full md:w-1/4 flex items-center justify-center">
+                
+            </div>
+            
         </div>
+
     </div>
     @else
         <div class="text-2xl dark:text-white text-center flex-row">
@@ -56,4 +58,4 @@
     
     
     
-    @vite(['resources/js/slider.js'])
+@vite(['resources/js/gallery-slider.js'])

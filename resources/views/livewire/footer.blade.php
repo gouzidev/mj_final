@@ -7,21 +7,22 @@
             </a>
             <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
                 <li>
-                    <a href="#" class="mr-4 hover:underline md:mr-6 ">About</a>
+                    <a href="/" class="mr-4 hover:underline md:mr-6 ">Accuei</a>
                 </li>
                 <li>
-                    <a href="#" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
+                    <a href="/articles" class="mr-4 hover:underline md:mr-6">Articles</a>
                 </li>
                 <li>
-                    <a href="#" class="mr-4 hover:underline md:mr-6 ">Licensing</a>
+                    <a href="{{ route("categories") }}" class="mr-4 hover:underline md:mr-6 ">Categories</a>
                 </li>
                 <li>
-                    <a href="#" class="hover:underline">Contact</a>
+                    <a href="/documents" class="hover:underline">Documents</a>
                 </li>
             </ul>
         </div>
         <hr class="my-6 border-gray-200 sm:mx-auto lg:my-8" />
-        <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">Flowbite™</a>. All Rights Reserved.</span>
+        <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
+            © 2023 . Tous les droits sont réservés.</span>
 
     </div>
 </footer>

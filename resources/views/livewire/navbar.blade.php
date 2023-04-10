@@ -123,14 +123,12 @@
         </ul>
         <div class="flex items-center">
 
-          <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
-            <span id="theme-toggle-dark-icon" class=" w-5 h-5 hidden" >
-              <i class="fa-solid fa-sun "></i>
-            </span>
-            <span id="theme-toggle-light-icon" class="w-5 h-5 hidden" >
-              <i class="fa-solid fa-moon"></i>
-            </svg>
-        </button>
+          <button id="theme-toggle" type="button" class="mr-4 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+
+          </button>
+
+
+
             @if(!Auth::user()) 
             <a href="{{route("login")}}">
                 <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5  dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
@@ -166,9 +164,7 @@
 
     </div>
   
-    <script
-      src="https://kit.fontawesome.com/ba496a122f.js"
-      crossorigin="anonymous"
-    ></script>
+    
   </div>
 </div>
+@vite("resources/js/mode-changer.js")

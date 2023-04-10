@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Models\Document;
 
+
 $documents = Document::with('category:id,category_name')->get();
 
 class DocumentController extends Controller

@@ -5,6 +5,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DocumentController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SearchController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,6 +28,8 @@ Route::get("/documents", [DocumentController::class, "documents_view"])->name("d
 Route::get("/articles", [ArticleController::class, "articles_view"])->name("articles");
 Route::get("/categories", [CategoryController::class, "categories_view"])->name("categories");
 Route::get("/category/{id}", [CategoryController::class, "show"])->name("category.show");
+Route::get("search/documents", [SearchController::class, "documents"])->name('search/documents');
+Route::get("search/articles", [SearchController::class, "articles"])->name('search/articles');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

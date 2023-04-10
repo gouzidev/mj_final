@@ -27,6 +27,9 @@ return [
 
     'path' => env('FILAMENT_PATH', 'admin'),
 
+    'dashboard' => [
+        'style' => '/css/dashboard.css',
+    ],
     /*
     |--------------------------------------------------------------------------
     | Filament Core Path
