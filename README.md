@@ -23,8 +23,11 @@ PROJECT SETUP
 
 (3mro database) :
 *1- diro compte => http://127.0.0.1:8000/login
+
 *2- rdoh admin mn => http://localhost/phpmyadmin  (is_admin => 1)
+
 *3- dkhlo bl admin => http://127.0.0.1:8000/admin/login
+
 *4- 3mro db
 
 DONE
