@@ -1,4 +1,4 @@
-@vite(["resources/css/article.css" , "resources/imports/fontawesome.php"])
+@vite(["resources/css/article.css"])
 
 
 <div class="grid gap-4">
