@@ -1,5 +1,8 @@
 <?php
 
+// Suppress deprecation warnings from vendor packages for PHP 8.4 compatibility
+error_reporting(E_ALL & ~E_DEPRECATED & ~E_USER_DEPRECATED);
+
 /*
 |--------------------------------------------------------------------------
 | Create The Application

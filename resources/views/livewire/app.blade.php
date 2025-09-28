@@ -4,61 +4,36 @@
     $limiter = 400;
 @endphp
 
+<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@^3.4.1/dist/glide.min.js"></script>
 <div class="w-full min-h-screen">
-   
-            
-    @livewire("gallery",["articles"=>[
-        [
-            "article_id"=> 0,
-            "image"=>"https://discoverymorocco.net/wp-content/uploads/2021/07/MOU_6485-e1534801237554.jpg",
-            "title"=>"Title",
-            "discription"=>limitString("Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur illo recusandae voluptate vitae aliquid nobis culpa officiis veniam est dolores tenetur delectus provident pariatur, adipisci quis nam praesentium excepturi eveniet repellendus facilis labore. Aspernatur quos consectetur, soluta natus facere saepe ullam labore alias commodi fugiat, autem architecto aliquid neque eius quia assumenda hic officia quidem distinctio. Delectus neque explicabo quibusdam blanditiis sit magni aspernatur, possimus vitae id porro quisquam! Veritatis commodi optio quis earum odio repellendus fugiat, sunt aliquid iste quibusdam, mollitia quaerat beatae laborum excepturi minus sit accusamus doloremque quae nesciunt incidunt laboriosam eveniet dolorem asperiores! Numquam, facilis asperiores.", $limiter)
-        ],
-        [
-            "article_id"=> 1,
-            "image"=>"https://article19.ma/accueil/wp-content/uploads/2019/10/Gouvernement-Maroc.jpg",
-            "title"=>"Title",
-            "discription"=>limitString("Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur illo recusandae voluptate vitae aliquid nobis culpa officiis veniam est dolores tenetur delectus provident pariatur, adipisci quis nam praesentium excepturi eveniet repellendus facilis labore. Aspernatur quos consectetur, soluta natus facere saepe ullam labore alias commodi fugiat, autem architecto aliquid neque eius quia assumenda hic officia quidem distinctio. Delectus neque explicabo quibusdam blanditiis sit magni aspernatur, possimus vitae id porro quisquam! Veritatis commodi optio quis earum odio repellendus fugiat, sunt aliquid iste quibusdam, mollitia quaerat beatae laborum excepturi minus sit accusamus doloremque quae nesciunt incidunt laboriosam eveniet dolorem asperiores! Numquam, facilis asperiores.", $limiter)
 
-        ],
-        [
-            "article_id"=> 2,
-            "image"=>"https://www.moroccojewishtimes.com/wp-content/uploads/2020/02/wahbi-1.jpg",
-            "title"=>"Title",
-            "discription"=>limitString("Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur illo recusandae voluptate vitae aliquid nobis culpa officiis veniam est dolores tenetur delectus provident pariatur, adipisci quis nam praesentium excepturi eveniet repellendus facilis labore. Aspernatur quos consectetur, soluta natus facere saepe ullam labore alias commodi fugiat, autem architecto aliquid neque eius quia assumenda hic officia quidem distinctio. Delectus neque explicabo quibusdam blanditiis sit magni aspernatur, possimus vitae id porro quisquam! Veritatis commodi optio quis earum odio repellendus fugiat, sunt aliquid iste quibusdam, mollitia quaerat beatae laborum excepturi minus sit accusamus doloremque quae nesciunt incidunt laboriosam eveniet dolorem asperiores! Numquam, facilis asperiores.", $limiter)
 
-        ],
-        [
-            "article_id"=> 3,
-            "image"=>"https://www.diplomatie.ma/sites/default/files/medias/background/xministre-bio_38.jpg.pagespeed.ic.wJC1tdsfm7.jpg",
-            "title"=>"Title",
-            "discription"=>limitString("Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur illo recusandae voluptate vitae aliquid nobis culpa officiis veniam est dolores tenetur delectus provident pariatur, adipisci quis nam praesentium excepturi eveniet repellendus facilis labore. Aspernatur quos consectetur, soluta natus facere saepe ullam labore alias commodi fugiat, autem architecto aliquid neque eius quia assumenda hic officia quidem distinctio. Delectus neque explicabo quibusdam blanditiis sit magni aspernatur, possimus vitae id porro quisquam! Veritatis commodi optio quis earum odio repellendus fugiat, sunt aliquid iste quibusdam, mollitia quaerat beatae laborum excepturi minus sit accusamus doloremque quae nesciunt incidunt laboriosam eveniet dolorem asperiores! Numquam, facilis asperiores.", $limiter)
+    @livewire("gallery",["articles"=> $articles])
 
-        ],
-        [
-            "article_id"=> 4,
-            "image"=>"https://www.lavieeco.com/wp-content/uploads/2015/11/convention-entre-Credit-Agricole-du-Maroc-et-le-ministere-de-agriculture.jpg",
-            "title"=>"Title",
-            "discription"=>limitString("Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur illo recusandae voluptate vitae aliquid nobis culpa officiis veniam est dolores tenetur delectus provident pariatur, adipisci quis nam praesentium excepturi eveniet repellendus facilis labore. Aspernatur quos consectetur, soluta natus facere saepe ullam labore alias commodi fugiat, autem architecto aliquid neque eius quia assumenda hic officia quidem distinctio. Delectus neque explicabo quibusdam blanditiis sit magni aspernatur, possimus vitae id porro quisquam! Veritatis commodi optio quis earum odio repellendus fugiat, sunt aliquid iste quibusdam, mollitia quaerat beatae laborum excepturi minus sit accusamus doloremque quae nesciunt incidunt laboriosam eveniet dolorem asperiores! Numquam, facilis asperiores.", $limiter)
+    <div class="mx-auto max-w-screen-xl px-4  py-8 lg:gap-8 xl:gap-0 lg:py-16">
+        <div class="px-4">
+        @livewire("search-document", compact("articles", "categories_and_docs"))
+        </div>
+        <section class="md:flex space-x-2">
+                <div class=" w-full lg:w-2/3  flex justify-center">
+                    @livewire("categories.categories-names")
+                </div>
+                
+                <div class=" w-full lg:w-2/3 md:w-1/2 lg:flex-row ">
+                    @foreach ($categories_and_docs as $category)
+                        {{-- gets the docs from cat (look for categories_and_docs => (CTRL + F)) --}}
+                        @livewire("document-slider",[
+                            "category" => $category,
+                            "key" => $category->id])
+                    @endforeach
+                </div>                
+        </section>
 
-        ],
-        [
-            "article_id"=> 5,
-            "image"=>"https://img.over-blog.com/500x299/2/25/98/74/01-fond-2013/ministere-justice-rabat-maroc.jpg",
-            "title"=>"Title",
-            "discription"=>limitString("Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur illo recusandae voluptate vitae aliquid nobis culpa officiis veniam est dolores tenetur delectus provident pariatur, adipisci quis nam praesentium excepturi eveniet repellendus facilis labore. Aspernatur quos consectetur, soluta natus facere saepe ullam labore alias commodi fugiat, autem architecto aliquid neque eius quia assumenda hic officia quidem distinctio. Delectus neque explicabo quibusdam blanditiis sit magni aspernatur, possimus vitae id porro quisquam! Veritatis commodi optio quis earum odio repellendus fugiat, sunt aliquid iste quibusdam, mollitia quaerat beatae laborum excepturi minus sit accusamus doloremque quae nesciunt incidunt laboriosam eveniet dolorem asperiores! Numquam, facilis asperiores.", $limiter)
-
-        ]
-        
-    ]
-        
-    ])
-
+    </div>
     
     @livewire("footer")
 
-
-
+    
 
     <div wire:loading>
         Loading...

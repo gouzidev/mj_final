@@ -1,8 +1,7 @@
 
 <div class="glide__slide h-full relative rounded-lg">
-
       <div id="img" class="">
-        <img src="{{$data["image"]}}" class=" h-full object-cover duration-200 
+        <img src="{{$data["thumbnail"]}}" class=" h-full object-cover duration-200 
       w-full " />
       </div>
       <div
@@ -19,7 +18,7 @@
         <p
           class="mb-3 font-normal text-gray-300 flex h-24 overflow-hidden"
         >
-          {{ $data["discription"] }}
+          {{ $data["content"] }}
         </p>
       </div>
 
