@@ -236,6 +236,21 @@ php artisan tinker --execute="App\Models\User::query()->update(['is_admin' => tr
 npm run build  # Rebuild if needed
 ```
 
+#### **MySQL Connection Error During Setup** 🗄️
+**Problem**: `SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost'`  
+**Cause**: `.env` file still configured for MySQL instead of SQLite  
+**Solution**: The setup script now auto-configures SQLite, but for manual fix:
+```bash
+# Edit .env file:
+DB_CONNECTION=sqlite
+DB_DATABASE=/absolute/path/to/your/project/database/database.sqlite
+# Comment out MySQL settings:
+#DB_HOST=127.0.0.1
+#DB_PORT=3306
+#DB_USERNAME=root
+#DB_PASSWORD=
+```
+
 #### **Port Already in Use** 🔌
 **Problem**: "Failed to listen on 127.0.0.1:8000 (reason: Address in use)"  
 **Solution**:

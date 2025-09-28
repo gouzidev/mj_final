@@ -87,6 +87,15 @@ if not exist .env (
         exit /b 1
     )
     echo [SUCCESS] Environment file created
+    
+    echo [INFO] 🔧 Configuring SQLite database...
+    powershell -Command "(gc .env) -replace 'DB_CONNECTION=mysql', 'DB_CONNECTION=sqlite' | Out-File -encoding ASCII .env"
+    powershell -Command "(gc .env) -replace 'DB_HOST=127.0.0.1', '#DB_HOST=127.0.0.1' | Out-File -encoding ASCII .env"
+    powershell -Command "(gc .env) -replace 'DB_PORT=3306', '#DB_PORT=3306' | Out-File -encoding ASCII .env"
+    powershell -Command "(gc .env) -replace 'DB_DATABASE=laravel', ('DB_DATABASE=' + (Get-Location).Path + '\database\database.sqlite') | Out-File -encoding ASCII .env"
+    powershell -Command "(gc .env) -replace 'DB_USERNAME=root', '#DB_USERNAME=root' | Out-File -encoding ASCII .env"
+    powershell -Command "(gc .env) -replace 'DB_PASSWORD=', '#DB_PASSWORD=' | Out-File -encoding ASCII .env"
+    echo [SUCCESS] SQLite configuration applied
 ) else (
     echo [WARNING] Environment file already exists, skipping...
 )

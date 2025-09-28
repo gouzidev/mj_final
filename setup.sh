@@ -113,6 +113,21 @@ setup_project() {
     if [ ! -f .env ]; then
         if cp .env.example .env; then
             print_success "Environment file created"
+            
+            # Configure SQLite database
+            print_status "🔧 Configuring SQLite database..."
+            sed -i 's/DB_CONNECTION=mysql/DB_CONNECTION=sqlite/' .env
+            sed -i 's/DB_HOST=127.0.0.1/#DB_HOST=127.0.0.1/' .env
+            sed -i 's/DB_PORT=3306/#DB_PORT=3306/' .env
+            sed -i 's/DB_DATABASE=laravel/DB_DATABASE=\/absolute\/path\/to\/database.sqlite/' .env
+            sed -i 's/DB_USERNAME=root/#DB_USERNAME=root/' .env
+            sed -i 's/DB_PASSWORD=/#DB_PASSWORD=/' .env
+            
+            # Set the correct absolute path for SQLite
+            CURRENT_DIR=$(pwd)
+            sed -i "s|DB_DATABASE=\/absolute\/path\/to\/database.sqlite|DB_DATABASE=${CURRENT_DIR}/database/database.sqlite|" .env
+            
+            print_success "SQLite configuration applied"
         else
             print_error "Failed to create environment file"
             exit 1
